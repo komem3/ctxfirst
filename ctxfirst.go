@@ -11,7 +11,7 @@ import (
 )
 
 var Doc = `check for context of argument.
-this analayzer checks funtion args whether context.Context is first argument
+this analayzer checks funtion args whether context.Context is first argument.
 `
 
 var Analyzer = &analysis.Analyzer{
