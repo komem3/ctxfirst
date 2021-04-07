@@ -11,7 +11,7 @@ import (
 )
 
 var Doc = `check for context of argument.
-this analayzer checks funtion args whether context.Context is first argument.
+this analayzer checks function args whether context.Context is first argument.
 `
 
 var Analyzer = &analysis.Analyzer{
@@ -39,7 +39,7 @@ func run(pass *analysis.Pass) (interface{}, error) {
 		for i, t := range ftype.Params.List {
 			if 0 < i &&
 				pass.TypesInfo.Types[t.Type].Type.String() == "context.Context" {
-				pass.Reportf(n.Pos(), "arguments contain context.Context but is not at the begining")
+				pass.Reportf(n.Pos(), "arguments contain context.Context but is not at the beginning")
 			}
 		}
 	})
